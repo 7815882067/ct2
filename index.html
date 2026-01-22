@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Number:
+<input id="num" type="number">
+<button onclick="generate()">Generate</button>
+
+<div id="result"></div>
+
+<script>
+function generate() {
+    let n = document.getElementById("num").value;
+    let res = document.getElementById("result");
+
+    if (n == "") {
+        alert("Enter a number");
+        return;
+    }
+
+    n = parseInt(n);
+    let t = "";
+
+    for (let i = 1; i <= 10; i++) {
+        t += n + " x " + i + " = " + (n * i) + "<br>";
+    }
+
+    res.innerHTML = t;
+}
+</script>
+
+</body>
+</html>
